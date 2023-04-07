@@ -34,7 +34,7 @@ export const PizzaCard: FC<Pizza> = props => {
 				{name}
 			</Text>
 			<HStack w={'full'} justifyContent={'space-between'}>
-				<Text fontWeight={'thin'}>${price.toFixed(2)}</Text>
+				<Text>${price.toFixed(2)}</Text>
 				<Button
 					bg={'orange.400'}
 					color={'white'}
