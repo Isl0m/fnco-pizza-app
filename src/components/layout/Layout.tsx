@@ -10,7 +10,7 @@ export const Layout = ({ children, ...rest }: Props) => {
 			<Header />
 			<Container
 				as={'main'}
-				maxW={{ base: '30ch', lg: '120ch', md: '80ch', sm: '60ch' }}
+				maxW={{ base: '40ch', lg: '120ch', md: '80ch', sm: '60ch' }}
 				my={'3rem'}
 				{...rest}
 			>

@@ -60,13 +60,6 @@ export const Header = () => {
 	return (
 		<Box as="header" bg="transparent" px={8} w="100%">
 			<Flex h={16} alignItems="center" justifyContent="space-between">
-				<IconButton
-					size="md"
-					icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-					aria-label="Open Menu"
-					display={{ md: 'none' }}
-					onClick={isOpen ? onClose : onOpen}
-				/>
 				<HStack
 					w="full"
 					spacing={8}
@@ -84,9 +77,21 @@ export const Header = () => {
 							</NavLink>
 						))}
 					</HStack>
-					<Button onClick={toggleColorMode}>
-						{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-					</Button>
+					<Box>
+						<IconButton
+							size="md"
+							icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+							aria-label="Open Menu"
+							display={{ md: 'none' }}
+							onClick={isOpen ? onClose : onOpen}
+							mr={2}
+						/>
+						<IconButton
+							aria-label="Change color mode"
+							icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+							onClick={toggleColorMode}
+						/>
+					</Box>
 				</HStack>
 			</Flex>
 

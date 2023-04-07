@@ -36,7 +36,7 @@ export const App = () => {
 	}, [])
 
 	return (
-		<Layout my={0}>
+		<Layout my={{ base: '3rem', md: 0 }}>
 			<Stack
 				minH={'90dvh'}
 				w={'full'}
@@ -131,7 +131,12 @@ export const App = () => {
 					))}
 				</Flex>
 			</Box>
-			<Flex my={24} alignItems={'center'} gap={8}>
+			<Flex
+				my={24}
+				direction={{ base: 'column', md: 'row' }}
+				alignItems={'center'}
+				gap={8}
+			>
 				<Box maxW={'45ch'}>
 					<Text
 						color={'orange.400'}
