@@ -1,0 +1,21 @@
+import { Container, ContainerProps } from '@chakra-ui/react'
+import { PropsWithChildren } from 'react'
+
+import { Header } from './Header'
+
+type Props = PropsWithChildren & ContainerProps
+export const Layout = ({ children, ...rest }: Props) => {
+	return (
+		<>
+			<Header />
+			<Container
+				as={'main'}
+				maxW={{ base: '30ch', lg: '120ch', md: '80ch', sm: '60ch' }}
+				my={'3rem'}
+				{...rest}
+			>
+				{children}
+			</Container>
+		</>
+	)
+}
