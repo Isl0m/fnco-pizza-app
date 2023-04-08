@@ -40,10 +40,10 @@ export const Products = () => {
 					))
 				) : (
 					<>
-						<Skeleton borderRadius={'lg'} w={'13.5rem'} h={'17rem'} />
-						<Skeleton borderRadius={'lg'} w={'13.5rem'} h={'17rem'} />
-						<Skeleton borderRadius={'lg'} w={'13.5rem'} h={'17rem'} />
-						<Skeleton borderRadius={'lg'} w={'13.5rem'} h={'17rem'} />
+						<Skeleton borderRadius={'lg'} w={'16rem'} h={'17rem'} />
+						<Skeleton borderRadius={'lg'} w={'16rem'} h={'17rem'} />
+						<Skeleton borderRadius={'lg'} w={'16rem'} h={'17rem'} />
+						<Skeleton borderRadius={'lg'} w={'16rem'} h={'17rem'} />
 					</>
 				)}
 			</Flex>

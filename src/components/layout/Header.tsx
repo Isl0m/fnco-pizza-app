@@ -77,7 +77,7 @@ export const Header = () => {
 							</NavLink>
 						))}
 					</HStack>
-					<Box>
+					<HStack>
 						<IconButton
 							size="md"
 							icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -91,7 +91,7 @@ export const Header = () => {
 							icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 							onClick={toggleColorMode}
 						/>
-					</Box>
+					</HStack>
 				</HStack>
 			</Flex>
 
