@@ -22,7 +22,7 @@ export const PizzaCard: FC<Pizza> = props => {
 			bgColor={useColorModeValue('gray.200', 'gray.700')}
 			borderRadius={'lg'}
 			p={4}
-			w={'80vw'}
+			w={'25ch'}
 		>
 			<Image boxSize={200} src={src} alt={name} />
 			<Text
