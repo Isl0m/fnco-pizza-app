@@ -7,9 +7,9 @@ import { ErrorBoundaryLayout } from '@components/error-boundary'
 import { CartContextProvider } from '@context/useCartContext'
 import { PizzasContextProvider } from '@context/usePizzasContext'
 import { About } from '@pages/About'
-import { App } from '@pages/App'
 import { Cart } from '@pages/Cart'
 import { Contacts } from '@pages/Contacts'
+import { Home } from '@pages/Home'
 import { Products } from '@pages/Products'
 
 import './index.css'
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: '/',
-				element: <App />,
+				element: <Home />,
 			},
 			{
 				path: '/products',

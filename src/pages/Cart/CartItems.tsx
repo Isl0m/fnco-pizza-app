@@ -1,6 +1,6 @@
 import { SimpleGrid } from '@chakra-ui/react'
 
-import { CartCart } from '@components/card'
+import { CartCard } from '@components/card'
 import { useCartValue } from '@context/useCartContext'
 
 export const CartItems = () => {
@@ -13,7 +13,7 @@ export const CartItems = () => {
 			gap={{ base: '1rem', md: '3rem' }}
 		>
 			{Object.values(pizzas).map(pizza => (
-				<CartCart {...pizza} key={pizza.id} />
+				<CartCard {...pizza} key={pizza.id} />
 			))}
 		</SimpleGrid>
 	)

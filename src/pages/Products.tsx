@@ -6,6 +6,7 @@ import { usePizzasValue } from '@context/usePizzasContext'
 
 export const Products = () => {
 	const { pizzas } = usePizzasValue()
+	const pizzasArray = pizzas
 
 	return (
 		<Layout>
@@ -22,8 +23,8 @@ export const Products = () => {
 				gap={{ base: '1rem', md: '3rem' }}
 				justify="center"
 			>
-				{Object.values(pizzas).length ? (
-					Object.values(pizzas).map(
+				{pizzasArray.length ? (
+					pizzasArray.map(
 						pizza => pizza && <PizzaCard {...pizza} key={pizza.id} />
 					)
 				) : (

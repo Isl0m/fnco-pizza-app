@@ -1,3 +1,4 @@
 export { FeaturesCard } from './FeaturesCard'
 export { PizzaCard } from './PizzaCard'
-export { CartCart } from './cart/CartCard'
+export { CartCard } from './cart/CartCard'
+export { CommentCard } from './CommentCard'

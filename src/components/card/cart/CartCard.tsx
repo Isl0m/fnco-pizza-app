@@ -11,7 +11,7 @@ import { CartPizza } from '@schemas/pizza.schema'
 
 import { Controls } from './Controls'
 
-export const CartCart: FC<CartPizza> = props => {
+export const CartCard: FC<CartPizza> = props => {
 	const { id, name, imageUrl: src, price, count } = props
 
 	return (

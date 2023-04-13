@@ -11,12 +11,11 @@ import {
 } from '@chakra-ui/react'
 import { Link as RouteLink } from 'react-router-dom'
 
-import { FeaturesCard, PizzaCard } from '@components/card'
-import { CommentCard } from '@components/card/CommentCard'
+import { CommentCard, FeaturesCard, PizzaCard } from '@components/card'
 import { Layout } from '@components/layout'
 import { usePizzasValue } from '@context/usePizzasContext'
 
-export const App = () => {
+export const Home = () => {
 	const { popularPizzas: pizzas } = usePizzasValue()
 
 	return (
