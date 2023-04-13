@@ -1,7 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { ErrorBoundaryLayout } from '@components/error-boundary'
 import { CartContextProvider } from '@context/useCartContext'
@@ -38,6 +38,10 @@ const router = createBrowserRouter([
 			{
 				path: '/contacts',
 				element: <Contacts />,
+			},
+			{
+				path: '*',
+				element: <Navigate to={'/'} />,
 			},
 		],
 	},
