@@ -12,9 +12,10 @@ import {
 	useDisclosure,
 } from '@chakra-ui/react'
 import { PropsWithChildren } from 'react'
-import { AiFillHome } from 'react-icons/ai'
+import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai'
 import { BsFillCartFill } from 'react-icons/bs'
 import { FaPizzaSlice } from 'react-icons/fa'
+import { MdContacts } from 'react-icons/md'
 import { NavLink as RouteLink } from 'react-router-dom'
 
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
@@ -23,6 +24,8 @@ const Links = [
 	{ title: 'Home', path: '/', icon: <AiFillHome /> },
 	{ title: 'Products', path: '/products', icon: <FaPizzaSlice /> },
 	{ title: 'Cart', path: '/cart', icon: <BsFillCartFill /> },
+	{ title: 'About Us', path: '/about', icon: <AiFillInfoCircle /> },
+	{ title: 'Contacts', path: '/contacts', icon: <MdContacts /> },
 ]
 
 type NavLinkProps = PropsWithChildren & {

@@ -9,31 +9,15 @@ import {
 	Text,
 	VStack,
 } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { Link as RouteLink } from 'react-router-dom'
 
 import { FeaturesCard, PizzaCard } from '@components/card'
 import { CommentCard } from '@components/card/CommentCard'
 import { Layout } from '@components/layout'
-import { Pizza } from '@schemas/pizza.schema'
-
-import { supabase } from '../supabaseClient'
+import { usePizzasValue } from '@context/usePizzasContext'
 
 export const App = () => {
-	const [pizzas, setPizzas] = useState<Pizza[] | []>([])
-
-	useEffect(() => {
-		const getPizzas = async () => {
-			const { data } = await supabase
-				.from('pizzas')
-				.select('*')
-				.gt('rating', 5)
-				.range(0, 3)
-			// @ts-ignore
-			setPizzas(data)
-		}
-
-		getPizzas()
-	}, [])
+	const { popularPizzas: pizzas } = usePizzasValue()
 
 	return (
 		<Layout my={{ base: '3rem', md: 0 }}>
@@ -59,6 +43,8 @@ export const App = () => {
 						</Text>
 						<Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
 							<Button
+								as={RouteLink}
+								to={'/products'}
 								bg={'orange.400'}
 								color={'white'}
 								_hover={{

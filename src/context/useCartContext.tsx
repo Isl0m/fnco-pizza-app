@@ -1,9 +1,15 @@
 import { useToast } from '@chakra-ui/react'
-import { PropsWithChildren, createContext, useContext, useState } from 'react'
+import {
+	PropsWithChildren,
+	createContext,
+	useContext,
+	useEffect,
+	useState,
+} from 'react'
 
 import { CartPizza, Pizza } from '@schemas/pizza.schema'
 
-import { useLocalStorage } from './useLocalStorage'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 
 type Pizzas = {
 	[index: number]: CartPizza
@@ -15,6 +21,7 @@ type CartContextValue = {
 	incItemCount: (id: number) => void
 	decItemCount: (id: number) => void
 	getTotalPrice: () => void
+	deleteAll: () => void
 }
 
 export const CartContext = createContext<CartContextValue>({
@@ -24,6 +31,7 @@ export const CartContext = createContext<CartContextValue>({
 	incItemCount: () => {},
 	decItemCount: () => {},
 	getTotalPrice: () => {},
+	deleteAll: () => {},
 })
 export const CartContextProvider = ({ children }: PropsWithChildren) => {
 	const { getItem, setItem } = useLocalStorage<Pizzas>('cartItems')
@@ -99,6 +107,9 @@ export const CartContextProvider = ({ children }: PropsWithChildren) => {
 			}
 		})
 	}
+	const deleteAllCartItems = () => {
+		setCart([])
+	}
 	const getTotalPrice = () => {
 		return Object.values(cart)
 			.map(i => i.price * i.count)
@@ -114,6 +125,7 @@ export const CartContextProvider = ({ children }: PropsWithChildren) => {
 				incItemCount,
 				decItemCount,
 				getTotalPrice,
+				deleteAll: deleteAllCartItems,
 			}}
 		>
 			{children}

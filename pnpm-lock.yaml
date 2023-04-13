@@ -17,6 +17,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-error-boundary: ^4.0.3
+  react-hook-form: ^7.43.9
   react-icons: ^4.8.0
   react-router-dom: ^6.10.0
   typescript: ^4.9.3
@@ -36,6 +37,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-error-boundary: 4.0.3_react@18.2.0
+  react-hook-form: 7.43.9_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
   react-router-dom: 6.10.0_biqbaboplfbrettd7655fr4n2y
   vite-tsconfig-paths: 4.0.8_27d6rnnqnnz33bvg4pqy2xno6y
@@ -2439,6 +2441,15 @@ packages:
       react-clientside-effect: 1.2.6_react@18.2.0
       use-callback-ref: 1.3.0_o2wclmlv6kymw75psj4clbbe6a
       use-sidecar: 1.1.2_o2wclmlv6kymw75psj4clbbe6a
+    dev: false
+
+  /react-hook-form/7.43.9_react@18.2.0:
+    resolution: {integrity: sha512-AUDN3Pz2NSeoxQ7Hs6OhQhDr6gtF9YRuutGDwPQqhSUAHJSgGl2VeY3qN19MG0SucpjgDiuMJ4iC5T5uB+eaNQ==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-icons/4.8.0_react@18.2.0:

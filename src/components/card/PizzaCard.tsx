@@ -8,14 +8,10 @@ import {
 } from '@chakra-ui/react'
 import { FC } from 'react'
 
-import { useCartValue } from '@hooks/useCartContext'
+import { AddToCart } from '@components/AddToCart'
 import { Pizza } from '@schemas/pizza.schema'
 
 export const PizzaCard: FC<Pizza> = props => {
-	const { update } = useCartValue()
-	const handleClick = () => {
-		update(props)
-	}
 	const { name, imageUrl: src, price } = props
 	return (
 		<VStack
@@ -34,17 +30,7 @@ export const PizzaCard: FC<Pizza> = props => {
 			</Text>
 			<HStack w={'full'} justifyContent={'space-between'}>
 				<Text>${price.toFixed(2)}</Text>
-				<Button
-					bg={'orange.400'}
-					color={'white'}
-					_hover={{
-						bg: 'orange.500',
-					}}
-					size={'xs'}
-					onClick={handleClick}
-				>
-					Add to cart
-				</Button>
+				<AddToCart {...props} />
 			</HStack>
 		</VStack>
 	)

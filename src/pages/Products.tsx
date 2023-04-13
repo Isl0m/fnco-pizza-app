@@ -1,23 +1,11 @@
-import { Container, Flex, Heading, Skeleton } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { Flex, Heading, Skeleton } from '@chakra-ui/react'
 
 import { PizzaCard } from '@components/card'
 import { Layout } from '@components/layout'
-import { Pizza } from '@schemas/pizza.schema'
-
-import { supabase } from '../supabaseClient'
+import { usePizzasValue } from '@context/usePizzasContext'
 
 export const Products = () => {
-	const [pizzas, setPizzas] = useState<Pizza[] | []>([])
-	useEffect(() => {
-		const getPizzas = async () => {
-			const { data } = await supabase.from('pizzas').select('*')
-			// @ts-ignore
-			setPizzas(data)
-		}
-
-		getPizzas()
-	}, [])
+	const { pizzas } = usePizzasValue()
 
 	return (
 		<Layout>
@@ -35,15 +23,15 @@ export const Products = () => {
 				justify="center"
 			>
 				{Object.values(pizzas).length ? (
-					Object.values(pizzas).map(pizza => (
-						<PizzaCard {...pizza} key={pizza.id} />
-					))
+					Object.values(pizzas).map(
+						pizza => pizza && <PizzaCard {...pizza} key={pizza.id} />
+					)
 				) : (
 					<>
-						<Skeleton borderRadius={'lg'} w={'16rem'} h={'17rem'} />
-						<Skeleton borderRadius={'lg'} w={'16rem'} h={'17rem'} />
-						<Skeleton borderRadius={'lg'} w={'16rem'} h={'17rem'} />
-						<Skeleton borderRadius={'lg'} w={'16rem'} h={'17rem'} />
+						<Skeleton borderRadius={'lg'} w={'25ch'} h={'16rem'} />
+						<Skeleton borderRadius={'lg'} w={'25ch'} h={'16rem'} />
+						<Skeleton borderRadius={'lg'} w={'25ch'} h={'16rem'} />
+						<Skeleton borderRadius={'lg'} w={'25ch'} h={'16rem'} />
 					</>
 				)}
 			</Flex>

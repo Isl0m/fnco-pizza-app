@@ -6,10 +6,7 @@ export const PizzaSchema = z.object({
 	name: z.string(),
 	price: z.number(),
 	imageUrl: z.string(),
-	sizes: z.array(z.number()),
-	types: z.array(z.number()),
-	category: z.number(),
-	rating: z.number(),
+	rating: z.number().min(0).max(5),
 })
 
 export type Pizza = z.infer<typeof PizzaSchema>
