@@ -16,7 +16,7 @@ export const Cart = () => {
 
 	if (isCartEmpty) return <CartEmpty />
 	return (
-		<Layout>
+		<Layout noFooter>
 			<Heading
 				fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
 				fontWeight={'bold'}

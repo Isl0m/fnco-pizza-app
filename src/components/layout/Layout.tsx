@@ -4,8 +4,8 @@ import { PropsWithChildren } from 'react'
 import { Footer } from './Footer'
 import { Header } from './Header'
 
-type Props = PropsWithChildren & ContainerProps
-export const Layout = ({ children, ...rest }: Props) => {
+type Props = PropsWithChildren & ContainerProps & { noFooter?: boolean }
+export const Layout = ({ children, noFooter = false, ...rest }: Props) => {
 	return (
 		<>
 			<Header />
@@ -17,7 +17,7 @@ export const Layout = ({ children, ...rest }: Props) => {
 			>
 				{children}
 			</Container>
-			<Footer />
+			{!noFooter && <Footer />}
 		</>
 	)
 }
