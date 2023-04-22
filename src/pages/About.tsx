@@ -1,13 +1,13 @@
-import { Box, Heading, Text } from '@chakra-ui/react'
+import { AspectRatio, Box, Heading, Text, VStack } from '@chakra-ui/react'
 
 import { Layout } from '@components/layout'
 
 export const About = () => {
 	return (
 		<Layout>
-			<Box>
+			<VStack gap={4}>
 				<Heading>Our mission</Heading>
-				<Text>
+				<Text >
 					Our mission at Pizza Delivery Company is to provide our customers with
 					the most delicious, high-quality pizzas, delivered quickly and with a
 					smile. We strive to exceed our customers' expectations every time they
@@ -16,9 +16,17 @@ export const About = () => {
 					using only the freshest, highest-quality ingredients in our pizzas,
 					and we believe that great pizza should be affordable and accessible to
 					everyone. At Pizza Delivery Company, we are passionate about making
-					our customers happy, one slice at a time.
+					our cucstomers happy, one slice at a time.
 				</Text>
-			</Box>
+				<Heading>Backstage</Heading>
+				<AspectRatio w={{base:'90vw', md:'2xl', lg: '4xl'}}  ratio={16/9}>
+					<iframe
+    				title='naruto'
+    				src='/backstage.mp4'
+						
+  				/>
+				</AspectRatio>
+			</VStack>
 		</Layout>
 	)
 }

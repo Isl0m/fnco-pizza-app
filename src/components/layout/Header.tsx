@@ -24,8 +24,8 @@ const Links = [
 	{ title: 'Home', path: '/', icon: <AiFillHome /> },
 	{ title: 'Products', path: '/products', icon: <FaPizzaSlice /> },
 	{ title: 'Cart', path: '/cart', icon: <BsFillCartFill /> },
-	// { title: 'About Us', path: '/about', icon: <AiFillInfoCircle /> },
-	// { title: 'Contacts', path: '/contacts', icon: <MdContacts /> },
+	{ title: 'About Us', path: '/about', icon: <AiFillInfoCircle /> },
+	{ title: 'Contacts', path: '/contacts', icon: <MdContacts /> },
 ]
 
 type NavLinkProps = PropsWithChildren & {
