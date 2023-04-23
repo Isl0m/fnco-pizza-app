@@ -31,14 +31,14 @@ const router = createBrowserRouter([
 				path: '/cart',
 				element: <Cart />,
 			},
-			// {
-			// 	path: '/about',
-			// 	element: <About />,
-			// },
-			// {
-			// 	path: '/contacts',
-			// 	element: <Contacts />,
-			// },
+			{
+				path: '/about',
+				element: <About />,
+			},
+			{
+				path: '/contacts',
+				element: <Contacts />,
+			},
 			{
 				path: '*',
 				element: <Navigate to={'/'} />,

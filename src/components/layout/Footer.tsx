@@ -23,7 +23,7 @@ export const Footer = () => {
 				align={{ base: 'center', md: 'center' }}
 			>
 				<Image src="/logo.svg" h={8} alt="logo" />
-				<Text>© 2022 Delipizza. All rights reserved</Text>
+				<Text>© 2023 Delipizza. All rights reserved</Text>
 			</Container>
 		</Box>
 	)
