@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Heading, Text, VStack } from '@chakra-ui/react'
+import { AspectRatio, Heading, Text, VStack } from '@chakra-ui/react'
 
 import { Layout } from '@components/layout'
 

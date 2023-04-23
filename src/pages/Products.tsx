@@ -23,7 +23,7 @@ export const Products = () => {
 				gap={{ base: '1rem', md: '3rem' }}
 				justify="center"
 			>
-				{pizzasArray.length ? (
+				{pizzasArray?.length ? (
 					pizzasArray.map(
 						pizza => pizza && <PizzaCard {...pizza} key={pizza.id} />
 					)
