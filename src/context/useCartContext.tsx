@@ -3,17 +3,13 @@ import {
 	PropsWithChildren,
 	createContext,
 	useContext,
-	useEffect,
 	useState,
 } from 'react'
 
-import { CartPizza, Pizza } from '@schemas/pizza.schema'
+import { Pizzas, Pizza } from '@schemas/pizza.schema'
 
 import { useLocalStorage } from '../hooks/useLocalStorage'
 
-type Pizzas = {
-	[index: number]: CartPizza
-}
 type CartContextValue = {
 	value: Pizzas
 	update: (value: Pizza) => void

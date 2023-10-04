@@ -11,3 +11,6 @@ export const PizzaSchema = z.object({
 
 export type Pizza = z.infer<typeof PizzaSchema>
 export type CartPizza = Pizza & { count: number }
+export type Pizzas = {
+	[index: number]: CartPizza
+}

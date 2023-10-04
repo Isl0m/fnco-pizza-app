@@ -7,7 +7,7 @@ export const About = () => {
 		<Layout>
 			<VStack gap={4}>
 				<Heading>Our mission</Heading>
-				<Text >
+				<Text>
 					Our mission at Pizza Delivery Company is to provide our customers with
 					the most delicious, high-quality pizzas, delivered quickly and with a
 					smile. We strive to exceed our customers' expectations every time they
@@ -19,12 +19,8 @@ export const About = () => {
 					our cucstomers happy, one slice at a time.
 				</Text>
 				<Heading>Backstage</Heading>
-				<AspectRatio w={{base:'90vw', md:'2xl', lg: '4xl'}}  ratio={16/9}>
-					<iframe
-    				title='naruto'
-    				src='/backstage.mp4'
-						
-  				/>
+				<AspectRatio w={{ base: '90vw', md: '2xl', lg: '4xl' }} ratio={16 / 9}>
+					<iframe title="naruto" src="/backstage.mp4" />
 				</AspectRatio>
 			</VStack>
 		</Layout>
